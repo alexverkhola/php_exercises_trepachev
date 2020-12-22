@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="html/style/style.css">
+    <title>Lesson 22</title>
+</head>
+<body>
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 2</p>
+        <p>Определение високосного года</p>
+        <p>Введите год</p>
+        <p><input type="text" name="year_input"></p>
+        <p><input type="submit" value="Отправить" name="form_1_submit"></p>
+        <p><?= $output_data_1; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 3</p>
+        <p>Определение дня недели</p>
+        <p>Введите дату в формате 01.12.1990</p>
+        <p><input type="text" name="date_input"></p>
+        <p><input type="submit" value="Отправить" name="form_2_submit"></p>
+        <p><?= $output_data_3; ?></p>
+    </form>
+
+    <p><?= $output_data_4; ?></p>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 5</p>
+        <p>Определить сколько дней осталось до дня рождения</p>
+        <p>Введите свой день рождения в формате 01.12.1990</p>
+        <p><input type="text" name="date_birthday"></p>
+        <p><input type="submit" value="Отправить" name="form_3_submit"></p>
+        <p><?= $output_data_5; ?></p>
+    </form>
+
+    <p><?= $output_data_6; ?></p>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 7</p>
+        <p>Определить знак зодиака</p>
+        <p>Введите свой день рождения в формате 01.12</p>
+        <p><input type="text" name="date_birthday"></p>
+        <p><input type="submit" value="Отправить" name="form_7_submit"></p>
+        <p><?= $output_data_7; ?></p>
+    </form>
+
+    <p><?= $output_data_8; ?></p>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 9</p>
+        <p>Гороскоп на сегодня</p>
+        <p>Введите свой день рождения в формате 01.12</p>
+        <p><input type="text" name="date_birthday"></p>
+        <p><input type="submit" value="Отправить" name="form_9_submit"></p>
+        <p><?= $output_data_9; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 10</p>
+        <p>Подсчитать сколько чего в тексте</p>
+        <p>Введите текст</p>
+        <p><input type="textarea" name="user_text"></p>
+        <p><input type="submit" value="Отправить" name="form_10_submit"></p>
+        <p><?= $output_data_10; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 11</p>
+        <p>Подсчитать процентное содержание каждого символа</p>
+        <p>Введите текст</p>
+        <p><input type="textarea" name="user_text"></p>
+        <p><input type="submit" value="Отправить" name="form_11_submit"></p>
+        <p><?= $output_data_11; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 12</p>
+        <p>Поиск слов по буквам</p>
+        <p>Введите текст</p>
+        <p><input type="textarea" name="user_text"></p>
+        <p><input type="submit" value="Отправить" name="form_12_submit"></p>
+        <p><?= $output_data_12; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 13</p>
+        <p>Вывод слов в алфавитном порядке</p>
+        <p>Введите текст</p>
+        <p><input type="textarea" name="user_text"></p>
+        <p><input type="submit" value="Отправить" name="form_13_submit"></p>
+        <p><?= $output_data_13; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 14</p>
+        <p>Вывод транслита слов</p>
+        <p>Введите текст</p>
+        <p><input type="textarea" name="user_text"></p>
+        <p><input type="submit" value="Отправить" name="form_14_submit"></p>
+        <p><?= $output_data_14; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 15</p>
+        <p>Перевод в транслит или обратно</p>
+        <p>Введите текст</p>
+        <p><input type="textarea" name="user_text"></p>
+        <p>
+            <input type="radio" name="translate_to" value="in" checked>
+            &nbsp;Перевести &nbsp;в &nbsp;транслит
+            <br>
+            <input type="radio" name="translate_to" value="back">
+            Перевести из транслита
+        </p>
+        <p class="danger">
+            Эта форма не рабочая. Задание не выполнено.
+        </p>
+        <p><input type="submit" value="Отправить" name="form_15_submit"></p>
+        <!-- <p><?= $output_data_15; ?></p> -->
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 16</p>
+        <p>Тест 1</p>
+       <?= $output_data_16; ?>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 17</p>
+        <p>Тест 2</p>
+       <?= $output_data_17; ?>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 18</p>
+        <p>Тест 3</p>
+       <?= $output_data_18; ?>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 19</p>
+        <p>Факториал</p>
+        <p><?= $output_data_19; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 20</p>
+        <p>Корни квадратного уравнения</p>
+        <p><input type="number" name="val_1"></p>
+        <p><input type="number" name="val_2"></p>
+        <p><input type="number" name="val_3"></p>
+        <p><input type="submit" value="Отправить" name="form_20_data"></p>
+        <p><?= $output_data_20; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 21</p>
+        <p>Тройка Пифагора</p>
+        <p><input type="number" name="val_1"></p>
+        <p><input type="number" name="val_2"></p>
+        <p><input type="number" name="val_3"></p>
+        <p><input type="submit" value="Отправить" name="form_21_data"></p>
+        <p><?= $output_data_21; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 22</p>
+        <p>Поиск делителей числа</p>
+        <p><input type="number" name="val"></p>
+        <p><input type="submit" value="Отправить" name="form_22_data"></p>
+        <p><?= $output_data_22; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 23</p>
+        <p>Разложить число на простые множители</p>
+        <p><input type="number" name="val"></p>
+        <p><input type="submit" value="Отправить" name="form_23_data"></p>
+        <p><?= $output_data_23; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 24</p>
+        <p>Поиск общих делителей для двух чисел</p>
+        <p><input type="number" name="val_1"></p>
+        <p><input type="number" name="val_2"></p>
+        <p><input type="submit" value="Отправить" name="form_24_data"></p>
+        <p><?= $output_data_24; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 25</p>
+        <p>Поиск наибольшего общего делителя для двух чисел</p>
+        <p><input type="number" name="val_1"></p>
+        <p><input type="number" name="val_2"></p>
+        <p><input type="submit" value="Отправить" name="form_25_data"></p>
+        <p><?= $output_data_25; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 26</p>
+        <p>Поиск наименьшего общего делителя для двух чисел</p>
+        <p><input type="number" name="val_1"></p>
+        <p><input type="number" name="val_2"></p>
+        <p><input type="submit" value="Отправить" name="form_26_data"></p>
+        <p><?= $output_data_26; ?></p>
+    </form>
+
+    <form action="lesson_22_exercises.php" method="GET">
+        <p>Задание 27</p>
+        <p>Найти день недели по дате</p>
+        <p><?= $form; ?></p>
+        <p><input type="submit" value="Отправить" name="form_27_data"></p>
+        <p><?= $output_data_27; ?></p>
+    </form>
+    
+</body>
+</html>
