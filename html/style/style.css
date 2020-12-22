@@ -45,6 +45,14 @@
     color: red;
 }
 
+.output_data {
+    border: 2px solid black;
+    max-width: 20%;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
 form {
     text-align: center;
     margin: 20px;
