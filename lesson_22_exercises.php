@@ -21,7 +21,7 @@ function daysToNewYear()
     return $days;
 }
 
-$output_data_0 = '<p>До Нового Года осталось '.daysToNewYear().' дней</p>';
+$output_data_0 = '<p class="output_data">До Нового Года осталось '.daysToNewYear().' дней</p>';
 
 /**
  * 2 Дан инпут и кнопка. В этот инпут вводится год.
@@ -56,14 +56,14 @@ $output_data_3 = '';
 if (isset($_GET['form_2_submit'])) {
     $date = date_create($_GET['date_input']);
     $day = date_format($date, 'l');
-    $output_data_2 = $day;
+    $output_data_3 = $day;
 }
 
 /**
  * 4  По заходу на страницу выведите текущую дату в формате
  * '12 мая 2015 года, воскресенье'.
  */
-$output_data_4 = date('d F Y, l', time());
+$output_data_4 = "<p class='output_data'>" . date('d F Y, l', time()) . "</p>";
 
 /**
  * 5 Дан инпут и кнопка. В этот инпут вводится дата рождения в формате
@@ -127,7 +127,8 @@ if ($current_time < $pancake) {
     $days = round(($current_time - $pancake) / (60 * 60 * 24));
 }
 
-$output_data_6 = '<p> До масленицы осталось '.$days.' дней </p>';
+$output_data_6 = '<p class="output_data"> До масленицы осталось '.
+                 $days.' дней </p>';
 
 /**
  * 7 Дан инпут и кнопка. В этот инпут вводится дата рождения в формате '31.12'.
@@ -190,7 +191,7 @@ if (isset($_GET['form_7_submit'])) {
  */
 $current_day = date('d.m');
 $current_zodiak = getZodiak($current_day);
-$output_data_8 = "Cейчас знак $current_zodiak";
+$output_data_8 = "<p class='output_data'> Cейчас знак $current_zodiak </p>";
 
 /**
  * 9 Сделайте скрипт-гороскоп. Внутри него хранится массив гороскопов

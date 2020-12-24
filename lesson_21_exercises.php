@@ -10,15 +10,18 @@ require 'settings.php';
 /** 
  * 1 Выведите с помощью цикла столбец чисел от 1 до 100
 */
+$output_data_1 = "<p>";
 for ($i = 1; $i <= 100; $i++) {
-    echo "<p>" . $i . "</p>";
+    $output_data_1 .=  $i;
 }
+$output_data_1 .=  "</p>";
 
 /**
  * 2 Выведите с помощью цикла столбец четных чисел от 1 до 100.
  */
+$output_data_2 = '';
 for ($i = 0; $i <= 100; $i += 2) {
-    echo "<p>" . $i . "</p>";
+    $output_data_2 .= "<p>" . $i . "</p>";
 }
 
 /**
@@ -458,3 +461,5 @@ foreach ($arr as $key) {
 echo "<hr>";
 print_r($http_arr);
 echo "<hr>";
+
+require 'html/lesson_21_exercises.html';
