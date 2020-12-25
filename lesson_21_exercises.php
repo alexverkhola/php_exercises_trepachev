@@ -14,7 +14,7 @@ $output_data_1 = "<p>";
 for ($i = 1; $i <= 100; $i++) {
     $output_data_1 .=  $i;
 }
-$output_data_1 .=  "</p>";
+$output_data_1 .=  "<br>";
 
 /**
  * 2 Выведите с помощью цикла столбец четных чисел от 1 до 100.
@@ -31,7 +31,7 @@ $sum = 0;
 for ($i = 1; $i <= 100; $i++) {
     $sum += $i;
 }
-echo "<p> Sum: $sum </p>";
+$output_data_3 = "<p> Sum: $sum </p>";
 
 /**
  *  4 Найдите с помощью цикла сумму квадратов чисел от 1 до 15. 
@@ -40,7 +40,7 @@ $sum = 0;
 for ($i = 1; $i <= 15; $i++) {
     $sum += $i ** 2;
 }
-echo "<p> Sum: $sum </p>";
+$output_data_4 = "<p> Sum: $sum </p>";
 
 /**
  * 5 Найдите с помощью цикла сумму корней чисел от 1 до 15. 
@@ -51,7 +51,7 @@ for ($i = 1; $i <= 15; $i++) {
     $sum +=  sqrt($i);
 }
 $sum = round($sum, 2);
-echo "<p> Sum: $sum </p>";
+$output_data_5 = "<p> Sum: $sum </p>";
 
 /**
  * 6 Найдите с помощью цикла сумму тех чисел от 1 до 100, которые делятся на 7
@@ -62,7 +62,7 @@ for ($i = 1; $i <= 100; $i++) {
         $sum += $i;
     }
 }
-echo "<p> Sum: $sum </p>";
+$output_data_6 = "<p> Sum: $sum </p>";
 
 /**
  * 7 Заполните массив 10-ю иксами с помощью цикла.
@@ -71,9 +71,7 @@ $arr = [];
 for ($i = 1; $i <= 10; $i++) {
     $arr[] = 'x';
 }
-echo "<hr>";
-var_dump($arr);
-echo "<hr>";
+$output_data_7 = '<pre>' . var_dump($arr) . '</pre>';
 
 /**
  * 8 Заполните массив числами от 1 до 10 с помощью цикла.
@@ -82,9 +80,7 @@ $arr = [];
 for ($i = 1; $i <= 10; $i++) {
     $arr[] = $i;
 }
-echo "<hr>";
-var_dump($arr);
-echo "<hr>";
+$output_data_8 = '<pre>' . var_dump($arr) . '</pre>';
 
 /**
  * 9  Заполните массив числами от 10 до 1 с помощью цикла.
@@ -93,9 +89,7 @@ $arr = [];
 for ($i = 10; $i >= 1; $i--) {
     $arr[] = $i;
 }
-echo "<hr>";
-var_dump($arr);
-echo "<hr>";
+$output_data_9 = '<pre>' . var_dump($arr) . '</pre>';
 
 /**
  * 10 Заполните массив 10-ю случайными числами от 1 до 10 с помощью цикла.
@@ -104,9 +98,7 @@ $arr = [];
 for ($i = 1; $i <= 10; $i++) {
     $arr[] = rand(1, 10);
 }
-echo "<hr>";
-var_dump($arr);
-echo "<hr>";
+$output_data_10 = '<pre>' . var_dump($arr) . '</pre>';
 
 /**
  * 11 С помощью цикла создайте строку из 6-ти символов,
@@ -116,7 +108,7 @@ $str = '';
 for ($i = 1; $i <= 6; $i++) {
     $str .= rand(1, 9);
 }
-echo "<p> $str </p>";
+$output_data_11 = $str;
 
 /**
  * 12 Дан массив с числами. 
@@ -127,7 +119,7 @@ $sum = 0;
 foreach ($arr as $key) {
     $sum += $key;
 }
-echo "<p> Sum: $sum </p>";
+$output_data_12 = 'Sum: ' . $sum;
 
 /**
  * 13 Дан массив с числами. 
@@ -138,7 +130,7 @@ $sum = 0;
 foreach ($arr as $key) {
     $sum += $key ** 2;
 }
-echo "<p> Sum: $sum </p>";
+$output_data_13 = 'Sum: ' . $sum;
 
 /**
  * 14 Дан массив с числами. 
@@ -152,7 +144,7 @@ foreach ($arr as $key) {
 }
 $sqrt = sqrt($sum);
 $sqrt = floor($sqrt);
-echo "<p> Sum: $sqrt </p>";
+$output_data_14 = 'Sum: ' . $sqrt;
 
 /**
  * 15 Дан массив с числами. Найдите сумму тех элементов массива, 
@@ -165,7 +157,7 @@ foreach ($arr as $key) {
         $sum += $key;
     }
 }
-echo "<p> Sum: $sum </p>";
+$output_data_15 = 'Sum: ' . $sum;
 
 /**
  * 16 Дан массив с числами. Проверьте, что в нем есть 3 одинаковых числа подряд
@@ -183,7 +175,7 @@ for ($i = 0; $i < $length; $i++) {
         count($repeat) == 3 
         and ($repeat[0] == $repeat[1] and $repeat[1] == $repeat[2])
     ) {
-        echo "<p>Number $repeat[0] repeats 3 times </p>";
+        $output_data_16 = "<p>Number $repeat[0] repeats 3 times </p>";
         unset($repeat);
     } 
 }
@@ -199,19 +191,20 @@ for ($i = 1; $i <= $size; $i++) {
         $str .= $i;
     }
 }
-echo "<p> $str </p>";
+$output_data_17 = $str;
 
 /**
  * 18 Дан многомерный массив. 
  * С помощью цикла выведите строки в формате 'имя-зарплата'.
  */
+$output_data_18 = '';
 $arr = [
     0=>['name'=>'Коля', 'salary'=>300],
     1=>['name'=>'Вася', 'salary'=>400],
     2=>['name'=>'Петя', 'salary'=>500],
 ];
 foreach ($arr as $key => $val) {
-    echo "<p>" . $val['name'] ." - " . $val['salary'] . " $ </p>";
+    $output_data_18 .= "<p>" . $val['name'] ." - " . $val['salary'] . " $ </p>";
 }
 
 /**
@@ -224,9 +217,7 @@ for ($i = 1; $i <= 10; $i++) {
         $arr[$i][] = rand(1, 10);
     }
 }
-echo "<hr>";
-print_r($arr);
-echo "<hr>";
+$output_data_19 = '<pre>' . print_r($arr) . '</pre>';
 
 /**
  * 20 Напишите свой аналог функции
@@ -243,11 +234,12 @@ function userUcfirst($str)
     } 
     return $str;
 }
-echo "<p>" . userUcfirst('some text') . "</p>";
+$output_data_20 =  userUcfirst('some text');
 
 /**
  * 21 Напишите свой аналог функции strrev. Решите задачу двумя способами.
  */
+$output_data_21 = '';
 function userStrrev1($str)
 {
     $result_str = '';
@@ -266,8 +258,8 @@ function userStrrev2($str)
     $result_str = implode('', $arr);
     return $result_str;
 }
-echo "<p>" . userStrrev1('some text') . "</p>";
-echo "<p>" . userStrrev2('some text') . "</p>";
+$output_data_21 .= userStrrev1('some text') . '<br>';
+$output_data_21 .= userStrrev2('some text');
 
 /**
  * 22 Напишите свой аналог функции strlen.
@@ -278,7 +270,7 @@ function userStrlen($str)
     $length = count($arr);
     return $length;
 }
-echo "<p>" . userStrlen('data') . "</p>";
+$output_data_22 = userStrlen('data');
 
 /**
  * 23 Поменяйте в строке большие буквы на маленькие и наоборот.
@@ -298,7 +290,7 @@ function convertStrRegisters($str)
     }
     return $result_str;
 }
-echo "<p>" . convertStrRegisters('sOmE tExT') . "</p>";
+$output_data_23 = convertStrRegisters('sOmE tExT');
 
 /**
  * 24 Преобразуйте строку 'var_text_hello' в 'varTextHello'. 
@@ -311,13 +303,14 @@ function convertStr($str) {
     $str = str_replace(' ', '', $str);
     return $str;
 }
-echo "<p>" . convertStr('var_text_hello') . "</p>";
+$output_data_24 = convertStr('var_text_hello');
 
 /**
  * 25 С помощью только одного цикла нарисуйте пирамидку
  */
+$output_data_25 = '';
 for ($i = 0; $i <= 9; $i++) {
-    echo "<p>" . str_repeat($i, $i) . "</p>";
+    $output_data_25 .= str_repeat($i, $i) . "<br>";
 }
 
 /**
@@ -326,9 +319,10 @@ for ($i = 0; $i <= 9; $i++) {
  * а произвольное количество, оно задается так: 
  * $str = 'xxxxxxxx'; - это первый ряд пирамиды.
  */
+$output_data_26 = '';
 $start_string = 'xxxxxxxx';
 while (strlen($start_string)) {
-    echo "<p>" . $start_string . "</p>";
+    $output_data_26 .= $start_string . "<br>";
     $start_string = substr($start_string, 1);
 }
 
@@ -345,9 +339,7 @@ foreach ($arr as $key) {
         $result_arr[] = $key;
     }
 }
-echo "<hr>";
-print_r($result_arr);
-echo "<hr>";
+$output_data_27 = '<pre>' . var_dump($result_arr) . '</pre>';
 
 /**
  * 28 Дан массив с произвольными целыми числами. 
@@ -360,9 +352,7 @@ $result_arr = [];
 while ($arr) {
     $result_arr[array_shift($arr)] = array_shift($arr);
 }
-echo "<hr>";
-print_r($result_arr);
-echo "<hr>";
+$output_data_28 = '<pre>' . var_dump($result_arr) . '</pre>';
 
 /**
  * 29 Дана строка. Удалите из этой строки четные символы
@@ -374,7 +364,7 @@ while ($str) {
     $result_str .= substr($str, 0, 1);
     $str = substr($str, 2);
 }
-echo "<p>" . $result_str . "</p>";
+$output_data_29 = $result_str;
 
 /**
  * 30 Дана строка. Поменяйте ее первый символ на второй и наоборот, 
@@ -385,7 +375,7 @@ $str = '12345678';
 $arr = str_split($str, 2);
 $arr = array_map('strrev', $arr);
 $str = implode('', $arr);
-echo "<p>" . $str . "</p>";
+$output_data_30 = $str;
 
 /**
  * 31 Сделайте аналог функции array_unique
@@ -403,9 +393,7 @@ function userArrayUnique($arr)
     return $result_arr;
 }
 
-echo "<hr>";
-print_r(userArrayUnique($arr));
-echo "<hr>";
+$output_data_31 = '<pre>' . print_r(userArrayUnique($arr)) . '</pre>';
 
 /**
  * 32 Сделайте функцию, противоположную функции array_unique. 
@@ -425,15 +413,14 @@ function oppositeUserArrayUnique($arr)
     $arr = array_diff($arr, $single_values);
     return $arr;
 }
-echo "<hr>";
-print_r(oppositeUserArrayUnique($arr));
-echo "<hr>";
+$output_data_32 = '<pre>' . print_r(oppositeUserArrayUnique($arr)) . '</pre>';
 
 /**
  * 33 Напишите скрипт, который проверяет, 
  * является ли данное число простым 
  * (простое число - это то, которое делится только на 1 и на само себя)
  */
+$output_data_33 = '';
 function isPrime($num)
 {
     $answer = "<p> $num is prime number </p>";
@@ -443,7 +430,7 @@ function isPrime($num)
             break;
         }
     }
-    echo $answer;
+    $output_data_33 = $answer;
 }
 isPrime(6);
 
@@ -458,8 +445,6 @@ foreach ($arr as $key) {
         $http_arr[] = $key;
     }
 }
-echo "<hr>";
-print_r($http_arr);
-echo "<hr>";
+$output_data_34 = '<pre>' . print_r($http_arr) . '</pre>';
 
 require 'html/lesson_21_exercises.html';
