@@ -146,7 +146,7 @@ $output_data_13 = findMatches($str, $pattern);
  * Между буквами a может быть любой символ (кроме a).
 */
 $str = 'aba accca azzza wwwwa';
-$pattern = '#a.*?a#';
+$pattern = '#a.+?a#';
 $output_data_14 = findMatches($str, $pattern);
 
-require 'html/lesson_25_exercises.html';
+require 'html/lesson_26_exercises.html';
