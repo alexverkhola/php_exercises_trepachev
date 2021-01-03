@@ -272,7 +272,6 @@ $output_data_28 = preg_replace($pattern, '!', $str);
 $str = 'bbb /aaa\\ bbb /ccc\\';
 $pattern = '#/.+?\\\#';
 $output_data_29 = preg_replace($pattern, '!', $str);
-//findMatches($str, $pattern);
 
 /** 
  * 30 Дана строка 'bbb <b> hello </b>, <b> world </b> eee'. 
@@ -281,32 +280,5 @@ $output_data_29 = preg_replace($pattern, '!', $str);
 $str = 'bbb <b> hello </b>, <b> world </b> eee';
 $pattern = '#<b>.+?b>#';
 $output_data_30 = preg_replace($pattern, '<b> ! </b>', $str);
-/** 
- * 
-*/
-$str = '';
-$pattern = '##';
-$output_data_ = findMatches($str, $pattern);
-
-/** 
- * 
-*/
-$str = '';
-$pattern = '##';
-$output_data_ = findMatches($str, $pattern);
-
-/** 
- * 
-*/
-$str = '';
-$pattern = '##';
-$output_data_ = findMatches($str, $pattern);
-
-/** 
- * 
-*/
-$str = '';
-$pattern = '##';
-$output_data_ = findMatches($str, $pattern);
 
 require 'html/lesson_27_exercises.html';
